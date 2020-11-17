@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
+using Aula.Entities;
+using Aula.Entities.Enums;
 
 namespace Aula
 {
@@ -8,8 +8,14 @@ namespace Aula
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("teste");
-            Console.WriteLine("teste2");
+            Order order = new Order
+            {
+                Id = 1080,
+                Moment = DateTime.Now,
+                Status = OrderStatus.PendingPayment
+            };
+
+            Console.WriteLine(order);
         }
     }
 }
